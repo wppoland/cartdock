@@ -202,17 +202,22 @@
 		0 0 0 rgba( 0, 0, 0, 0 );
 }
 
-/* Secondary "choose options" button: an outlined brass ring, not a filled shackle. */
+/*
+ * Secondary "choose options" button: an outlined brass ring, not a filled
+ * shackle. The ring is a meaningful control boundary, so it uses the solid
+ * brass accent (>=3:1 against the surface) rather than the faint hairline
+ * token used for the bar's decorative top edge.
+ */
 .anchor-bar__button--choose {
 	color: var( --anchor-brass-bright );
 	background: transparent;
-	border: 1px solid var( --anchor-border );
+	border: 1px solid var( --anchor-brass );
 	box-shadow: none;
 }
 
 .anchor-bar__button--choose:hover {
 	filter: none;
-	border-color: var( --anchor-brass );
+	border-color: var( --anchor-brass-bright );
 	background: rgba( 200, 155, 83, 0.1 );
 }
 
@@ -266,6 +271,13 @@
 
 	.anchor-bar__button--choose {
 		color: var( --anchor-brass-deep );
+		/* On a bright surface, mid brass (#c89b53) is only ~2.5:1; deep brass
+		   keeps the control ring at >=3:1 (≈5:1). */
+		border-color: var( --anchor-brass-deep );
+	}
+
+	.anchor-bar__button--choose:hover {
+		border-color: var( --anchor-brass );
 	}
 }
 
