@@ -79,6 +79,18 @@ Yes. On simple products the bar shows the title, price and add-to-cart button. O
 1. The sticky add-to-cart bar on a product page.
 2. The Anchor settings screen under WooCommerce.
 
+== External Services ==
+
+Anchor does not connect to any external services. It sends no data off your site
+and loads nothing from a third-party CDN — its stylesheet and script (`assets/css/anchor.css`
+and `assets/js/anchor.js`) are served from your own install, and the front-end script reads
+only a small `anchorConfig` object (the scroll threshold) that WordPress prints inline.
+
+All of Anchor's data stays in your database: it stores two autoloaded-off options,
+`anchor_settings` (the enable toggle and scroll threshold) and `anchor_db_version`,
+and keeps no per-product data. Both options are removed when you delete the plugin.
+Anchor sends no email and makes no HTTP requests of its own.
+
 == Changelog ==
 
 = 0.1.0 =
