@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,9 @@ and keeps no per-product data. Both options are removed when you delete the plug
 Anchor sends no email and makes no HTTP requests of its own.
 
 == Changelog ==
+
+= 0.1.1 =
+* `anchor/bar_visible` filter so PRO and custom code can hide the bar per product without loading assets.
 
 = 0.1.0 =
 * Initial release: a sticky add-to-cart bar on single product pages, revealed on scroll, with a configurable scroll threshold and variation-aware price/availability sync.

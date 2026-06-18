@@ -96,7 +96,7 @@ final class StickyBar implements HasHooks
 
     /**
      * The bar renders only when enabled, WooCommerce is present and we are on a
-     * single product page.
+     * single product page. Extensions may hide the bar via `anchor/bar_visible`.
      */
     private function shouldRender(): bool
     {
@@ -108,7 +108,17 @@ final class StickyBar implements HasHooks
             return false;
         }
 
-        return true;
+        $settings = $this->settings();
+        $product  = $this->currentProduct();
+
+        /**
+         * Filter whether the sticky bar should load and render on this request.
+         *
+         * @param bool               $visible  Whether Anchor would show the bar.
+         * @param array<string,mixed> $settings Resolved anchor_settings.
+         * @param \WC_Product|null   $product  Current product on single product pages.
+         */
+        return (bool) apply_filters('anchor/bar_visible', true, $settings, $product);
     }
 
     private function currentProduct(): ?\WC_Product
