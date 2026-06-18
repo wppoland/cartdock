@@ -31,6 +31,15 @@ Anchor is not on the WordPress.org directory yet, so if you want to read the
 code, report a bug or suggest a change, the repository is at
 https://github.com/wppoland/anchor.
 
+= Documentation and links =
+
+* **Documentation** - https://plogins.com/anchor/docs/
+* **Plugin page** - https://plogins.com/anchor/
+* **Source code** - https://github.com/wppoland/anchor
+* **Bug reports and feature requests** - https://github.com/wppoland/anchor/issues
+* **Discussions and questions** - https://github.com/wppoland/anchor/discussions
+
+
 = Features =
 
 * Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
