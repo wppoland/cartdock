@@ -1,5 +1,5 @@
 === Anchor - Sticky Add to Cart Bar for WooCommerce ===
-Contributors: wppoland
+Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.0
