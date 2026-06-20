@@ -88,10 +88,26 @@ final class StickyBar implements HasHooks
 
         $settings = $this->settings();
 
+        ob_start();
         $this->renderTemplate('sticky-bar', [
             'product'  => $product,
             'settings' => $settings,
         ]);
+        $output = (string) ob_get_clean();
+
+        if ('' === trim($output)) {
+            return;
+        }
+
+        echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is escaped inside the template.
+
+        /**
+         * Fires after the sticky add-to-cart bar is rendered on a single product page.
+         *
+         * @param \WC_Product          $product  The current product.
+         * @param array<string, mixed> $settings Plugin settings.
+         */
+        do_action('anchor/bar_rendered', $product, $settings);
     }
 
     /**

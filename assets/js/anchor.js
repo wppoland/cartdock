@@ -42,6 +42,7 @@
 		}
 		bar.setAttribute( 'aria-hidden', 'false' );
 		bar.classList.add( 'is-visible' );
+		bar.dispatchEvent( new CustomEvent( 'anchor:bar-visible', { bubbles: true } ) );
 
 		// Presentation only: play the "anchor catches" settle once, the first time
 		// the bar lands. Re-show on later scrolls just slides; it doesn't re-settle.
