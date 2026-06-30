@@ -32,7 +32,7 @@ $productUrl   = $product->get_permalink();
     class="anchor-bar"
     id="anchor-bar"
     role="region"
-    aria-label="<?php esc_attr_e('Add to cart', 'anchor'); ?>"
+    aria-label="<?php esc_attr_e('Add to cart', 'plogins-anchor'); ?>"
     aria-hidden="true"
     data-anchor-bar
     data-product-id="<?php echo esc_attr((string) $product->get_id()); ?>"
@@ -65,7 +65,7 @@ $productUrl   = $product->get_permalink();
                     class="button anchor-bar__button anchor-bar__button--choose"
                     data-anchor-choose
                 >
-                    <?php esc_html_e('Choose options', 'anchor'); ?>
+                    <?php esc_html_e('Choose options', 'plogins-anchor'); ?>
                 </button>
                 <form
                     class="anchor-bar__form anchor-bar__form--variable"
@@ -84,7 +84,7 @@ $productUrl   = $product->get_permalink();
                         data-anchor-add
                         disabled
                     >
-                        <?php esc_html_e('Add to cart', 'anchor'); ?>
+                        <?php esc_html_e('Add to cart', 'plogins-anchor'); ?>
                     </button>
                 </form>
             </div>

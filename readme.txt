@@ -1,11 +1,11 @@
-=== Anchor - Sticky Add to Cart Bar for WooCommerce ===
+=== Plogins Anchor for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, add to cart, sticky, conversion, product page
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,15 +29,14 @@ layout shift when it appears.
 
 Anchor is not on the WordPress.org directory yet, so if you want to read the
 code, report a bug or suggest a change, the repository is at
-https://github.com/wppoland/anchor.
+https://github.com/wppoland/plogins-anchor.
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/anchor/docs/
-* **Plugin page** - https://plogins.com/anchor/
-* **Source code** - https://github.com/wppoland/anchor
-* **Bug reports and feature requests** - https://github.com/wppoland/anchor/issues
-* **Discussions and questions** - https://github.com/wppoland/anchor/discussions
+* **Documentation** - https://plogins.com/plogins-anchor/docs/
+* **Plugin page** - https://plogins.com/plogins-anchor/
+* **Source code** - https://github.com/wppoland/plogins-anchor
+* **Bug reports and feature requests** - https://github.com/wppoland/plogins-anchor/issues
 
 
 = Features =
@@ -101,6 +100,9 @@ and keeps no per-product data. Both options are removed when you delete the plug
 Anchor sends no email and makes no HTTP requests of its own.
 
 == Changelog ==
+
+= 0.1.3 =
+* Renamed to Plogins Anchor for WooCommerce for a more distinctive plugin name.
 
 = 0.1.2 =
 * Add `anchor/bar_rendered` action and `anchor:bar-visible` front-end event for PRO analytics.

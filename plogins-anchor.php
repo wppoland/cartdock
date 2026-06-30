@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       Anchor - Sticky Add to Cart Bar for WooCommerce
- * Plugin URI:        https://plogins.com/anchor/
+ * Plugin Name:       Plogins Anchor for WooCommerce
+ * Plugin URI:        https://plogins.com/plogins-anchor/
  * Description:        A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages.
- * Version:           0.1.2
+ * Version:           0.1.3
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -11,7 +11,7 @@
  * Author URI:        https://wppoland.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       anchor
+ * Text Domain:       plogins-anchor
  * Domain Path:       /languages
  * WC requires at least: 8.0
  *
@@ -24,7 +24,7 @@ namespace Anchor;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '0.1.2';
+const VERSION     = '0.1.3';
 const PLUGIN_FILE = __FILE__;
 
 define('ANCHOR_DIR', plugin_dir_path(__FILE__));
@@ -44,7 +44,7 @@ add_action('plugins_loaded', static function (): void {
     if (! class_exists('WooCommerce')) {
         add_action('admin_notices', static function (): void {
             echo '<div class="notice notice-error"><p>';
-            echo esc_html__('Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active.', 'anchor');
+            echo esc_html__('Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to be active.', 'plogins-anchor');
             echo '</p></div>';
         });
         return;
