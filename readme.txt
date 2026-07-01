@@ -82,6 +82,11 @@ Yes. Set the scroll threshold in pixels under **WooCommerce → Anchor** (0–50
 
 Yes. On simple products the bar shows the title, price and add-to-cart button. On variable products it tracks the selected variation.
 
+
+= Does this plugin work on WordPress Multisite? =
+
+Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data.
+
 == Screenshots ==
 
 1. The sticky add-to-cart bar on a product page.
