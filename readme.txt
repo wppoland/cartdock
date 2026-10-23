@@ -9,7 +9,7 @@ Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Keeps the add-to-cart button in reach on long WooCommerce product pages with a sticky bar that appears on scroll.
+Keep Add to cart within reach on long product pages, on mobile and desktop, with a slim bar that slides in as shoppers scroll.
 
 == Description ==
 
@@ -43,7 +43,8 @@ code, report a bug or suggest a change, the repository is at
 
 * Sticky add-to-cart bar on single product pages, revealed once the shopper scrolls past the main button.
 * Scroll threshold you set in pixels (0 to 5000), so you decide how far down the bar kicks in.
-* Shows the product title, price and a buy button.
+* Shows a small product thumbnail, the title, the price and a buy button. The thumbnail is hidden on screens 360px wide and narrower.
+* The bar's Add to cart sends the quantity chosen in the product form, kept within that field's minimum, maximum and step.
 * On variable products the price tracks the variation the shopper has selected, and the button disables itself if that variation is out of stock.
 * Marked up as an ARIA region with a visible focus state and screen-reader label.
 * Honours prefers-reduced-motion and has a dark-mode style.
@@ -93,6 +94,8 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 1. The sticky add-to-cart bar on a product page.
 2. The Cartdock settings screen under WooCommerce.
 3. The same bar on a phone, pinned to the bottom of the screen.
+4. The bar on a 390px phone, with the product thumbnail, title, price and Add to cart.
+5. With 3 in the product's quantity field, the bar's Add to cart adds three.
 
 == External Services ==
 
