@@ -27,8 +27,7 @@ The bar is positioned with CSS `position: fixed` and starts hidden, so it sits
 outside the document flow and does not push other content around or cause
 layout shift when it appears.
 
-Cartdock is not on the WordPress.org directory yet, so if you want to read the
-code, report a bug or suggest a change, the repository is at
+To read the code, report a bug or suggest a change, the repository is at
 [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
 
 = Documentation and links =
