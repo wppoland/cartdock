@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -111,6 +111,10 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.6 =
+* New: the bar's Add to cart sends the quantity chosen in the product form, kept within that field's minimum, maximum and step. It always added one before.
+* New: a small product thumbnail sits before the title in the bar. It is hidden on very narrow screens.
 
 = 1.1.5 =
 * Fixed: on a variable product the bar's Add to cart now sends the shopper's chosen attributes. A variation set to "Any" value of an attribute was refused with "<attribute> is a required field".
