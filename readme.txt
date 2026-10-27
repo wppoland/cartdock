@@ -54,12 +54,19 @@ To read the code, report a bug or suggest a change, the repository is at
 
 == Cartdock Pro ==
 
-Cartdock Pro is a separate paid plugin that works on top of Cartdock. It adds:
+Cartdock Pro is a separate paid plugin that extends Cartdock:
 
-* Custom bar button colour and label
-* Placement rules
-* Campaign scheduling
-* Conversion analytics
+| Feature | Free | Pro |
+|:--- |:---:|:---:|
+| Sticky add-to-cart bar | Yes | Yes |
+| Scroll threshold in pixels | Yes | Yes |
+| Title, price and button | Yes | Yes |
+| Variation-aware | Yes | Yes |
+| Dark mode and reduced-motion | Yes | Yes |
+| Custom bar button colour and label | - | Yes |
+| Placement rules | - | Yes |
+| Campaign scheduling | - | Yes |
+| Conversion analytics | - | Yes |
 
 The free edition is not a trial and its features stay available without a time limit.
 
