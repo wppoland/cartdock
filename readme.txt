@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,7 @@ To read the code, report a bug or suggest a change, the repository is at
 * **Plugin page**: [plogins.com/plogins-anchor/](https://plogins.com/plogins-anchor/)
 * **Source code**: [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor)
 * **Bug reports and feature requests**: [github.com/wppoland/plogins-anchor/issues](https://github.com/wppoland/plogins-anchor/issues)
+* **Cartdock Pro**: [plogins.com/plogins-anchor-pro/](https://plogins.com/plogins-anchor-pro/)
 
 
 = Features =
@@ -50,6 +51,21 @@ To read the code, report a bug or suggest a change, the repository is at
 * The bar is fixed to the viewport and starts hidden, so it does not cause layout shift.
 * Ships with a POT file for translation, and deleting the plugin removes the two options it stores.
 * Declares HPOS and cart/checkout blocks compatibility.
+
+== Cartdock Pro ==
+
+Cartdock Pro is a separate paid plugin that works on top of Cartdock. It adds:
+
+* Custom bar button colour and label
+* Placement rules
+* Campaign scheduling
+* Conversion analytics
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Cartdock Pro** - [plogins.com/plogins-anchor-pro/](https://plogins.com/plogins-anchor-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-anchor-pro/pricing/](https://plogins.com/plogins-anchor-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-anchor-pro/docs/](https://plogins.com/plogins-anchor-pro/docs/)
 
 == Installation ==
 
@@ -113,6 +129,9 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.7 =
+* Readme only: a PRO section with links to the paid edition.
 
 = 1.1.6 =
 * New: the bar's Add to cart sends the quantity chosen in the product form, kept within that field's minimum, maximum and step. It always added one before.
