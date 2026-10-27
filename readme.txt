@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,19 +54,22 @@ To read the code, report a bug or suggest a change, the repository is at
 
 == Cartdock Pro ==
 
-Cartdock Pro is a separate paid plugin that extends Cartdock:
+Cartdock Pro is a separate paid plugin that extends Cartdock.
 
-| Feature | Free | Pro |
-|:--- |:---:|:---:|
-| Sticky add-to-cart bar | Yes | Yes |
-| Scroll threshold in pixels | Yes | Yes |
-| Title, price and button | Yes | Yes |
-| Variation-aware | Yes | Yes |
-| Dark mode and reduced-motion | Yes | Yes |
-| Custom bar button colour and label | - | Yes |
-| Placement rules | - | Yes |
-| Campaign scheduling | - | Yes |
-| Conversion analytics | - | Yes |
+Included in Cartdock:
+
+* Sticky add-to-cart bar
+* Scroll threshold in pixels
+* Title, price and button
+* Variation-aware
+* Dark mode and reduced-motion
+
+Cartdock Pro adds:
+
+* Custom bar button colour and label
+* Placement rules
+* Campaign scheduling
+* Conversion analytics
 
 The free edition is not a trial and its features stay available without a time limit.
 
@@ -136,6 +139,10 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.8 =
+* The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.
+* Readme: the PRO section lists what the free plugin includes and what the paid edition adds as two lists, which WordPress.org can display (it does not display tables).
 
 = 1.1.7 =
 * Readme only: a PRO section with links to the paid edition.
