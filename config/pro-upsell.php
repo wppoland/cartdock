@@ -12,6 +12,8 @@ defined('ABSPATH') || exit;
 return [
     'name'       => 'Cartdock Pro',
     'url'        => 'https://plogins.com/plogins-anchor-pro/pricing/',
+    'campaign'   => 'plogins-anchor',
+    'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 19,
     'currency'   => 'EUR',
