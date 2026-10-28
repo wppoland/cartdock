@@ -4,15 +4,15 @@
  * scripts/gen-pro-upsell.mjs. The admin upsell renders this; curate the
  * feature list to fit this plugin's settings screen (do not invent features).
  *
- * @package plogins-anchor-pro
+ * @package cartdock-pro
  */
 
 defined('ABSPATH') || exit;
 
 return [
     'name'       => 'Cartdock Pro',
-    'url'        => 'https://plogins.com/plogins-anchor-pro/pricing/',
-    'campaign'   => 'plogins-anchor',
+    'url'        => 'https://plogins.com/cartdock-pro/pricing/',
+    'campaign'   => 'cartdock',
     'locales'    => ['pl', 'de', 'es'],
     'sellable'   => true,
     'price_from' => 19,

@@ -23,7 +23,7 @@ msgstr "Cartdock - przyklejony pasek dodawania do koszyka dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: cartdock.php
-msgid "https://plogins.com/plogins-anchor/"
+msgid "https://plogins.com/cartdock/"
 msgstr ""
 
 #. Description of the plugin
@@ -181,9 +181,6 @@ msgstr "Wybierz opcje"
 #~ msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
 #~ msgstr ""
 #~ "Plogins Anchor - Przyklejony przycisk dodawania do koszyka dla WooCommerce"
-
-#~ msgid "https://plogins.com/cartdock/"
-#~ msgstr "https://plogins.com/cartdock/"
 
 #~ msgid ""
 #~ "Anchor - Sticky Add to Cart Bar for WooCommerce requires WooCommerce to "
