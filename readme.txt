@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,15 +28,15 @@ outside the document flow and does not push other content around or cause
 layout shift when it appears.
 
 To read the code, report a bug or suggest a change, the repository is at
-[github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor).
+[github.com/wppoland/cartdock](https://github.com/wppoland/cartdock).
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-anchor/docs/](https://plogins.com/plogins-anchor/docs/)
-* **Plugin page**: [plogins.com/plogins-anchor/](https://plogins.com/plogins-anchor/)
-* **Source code**: [github.com/wppoland/plogins-anchor](https://github.com/wppoland/plogins-anchor)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-anchor/issues](https://github.com/wppoland/plogins-anchor/issues)
-* **Cartdock Pro**: [plogins.com/plogins-anchor-pro/](https://plogins.com/plogins-anchor-pro/)
+* **Documentation**: [plogins.com/cartdock/docs/](https://plogins.com/cartdock/docs/)
+* **Plugin page**: [plogins.com/cartdock/](https://plogins.com/cartdock/)
+* **Source code**: [github.com/wppoland/cartdock](https://github.com/wppoland/cartdock)
+* **Bug reports and feature requests**: [github.com/wppoland/cartdock/issues](https://github.com/wppoland/cartdock/issues)
+* **Cartdock Pro**: [plogins.com/cartdock-pro/](https://plogins.com/cartdock-pro/)
 
 
 = Features =
@@ -73,9 +73,9 @@ Cartdock Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Cartdock Pro** - [plogins.com/plogins-anchor-pro/](https://plogins.com/plogins-anchor-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-anchor-pro/pricing/](https://plogins.com/plogins-anchor-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-anchor-pro/docs/](https://plogins.com/plogins-anchor-pro/docs/)
+* **Cartdock Pro** - [plogins.com/cartdock-pro/](https://plogins.com/cartdock-pro/)
+* **Compare editions and pricing** - [plogins.com/cartdock-pro/pricing/](https://plogins.com/cartdock-pro/pricing/)
+* **PRO documentation** - [plogins.com/cartdock-pro/docs/](https://plogins.com/cartdock-pro/docs/)
 
 == Installation ==
 
@@ -139,6 +139,9 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.9 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.1.8 =
 * The Upgrade to PRO links open the pricing page in the admin's language where plogins.com has one, and tell plogins.com which plugin the visit came from (utm_source, utm_medium and utm_campaign in the link). Nothing is sent from your site.

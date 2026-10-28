@@ -22,7 +22,7 @@ msgstr "Cartdock - Sticky Add-to-Cart-Leiste für WooCommerce"
 
 #. Plugin URI of the plugin
 #: cartdock.php
-msgid "https://plogins.com/plogins-anchor/"
+msgid "https://plogins.com/cartdock/"
 msgstr ""
 
 #. Description of the plugin

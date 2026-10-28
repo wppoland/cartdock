@@ -22,7 +22,7 @@ msgstr "Cartdock - barra fija de añadir al carrito para WooCommerce"
 
 #. Plugin URI of the plugin
 #: cartdock.php
-msgid "https://plogins.com/plogins-anchor/"
+msgid "https://plogins.com/cartdock/"
 msgstr ""
 
 #. Description of the plugin

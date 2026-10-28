@@ -4,4 +4,4 @@
 - **Documentation:** https://plogins.com/anchor/docs/
 - **Author:** [WPPoland.com](https://wppoland.com)
 - **WordPress.org contributor:** motylanogha
-- **Source:** https://github.com/wppoland/anchor
+- **Source:** https://github.com/wppoland/cartdock
