@@ -193,7 +193,13 @@ final class Settings implements HasHooks
                                         </p>
                                     <?php else : ?>
                                         <p class="description">
-                                            <?php esc_html_e('Install Swift - Buy Now Button for WooCommerce to add a Buy Now button next to Add to cart in the sticky bar.', 'cartdock'); ?>
+                                            <?php
+                                            printf(
+                                                /* translators: %s: partner plugin name, linked to its search on the Add Plugins screen. */
+                                                esc_html__('Install %s to add a Buy Now button next to Add to cart in the sticky bar.', 'cartdock'),
+                                                '<a href="' . esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Swift - Buy Now Button for WooCommerce') . '&tab=search&type=term')) . '">' . esc_html('Swift - Buy Now Button for WooCommerce') . '</a>'
+                                            );
+                                            ?>
                                         </p>
                                     <?php endif; ?>
                                 </td>
