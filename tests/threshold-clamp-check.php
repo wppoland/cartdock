@@ -19,6 +19,12 @@ namespace Anchor\Contract {
 
 namespace {
     define('ABSPATH', __DIR__);
+    define('ANCHOR_DIR', __DIR__ . '/../');
+
+    function get_option(string $name, mixed $default = false): mixed
+    {
+        return $GLOBALS['anchor_test_option'] ?? $default;
+    }
 
     function apply_filters(string $hook, mixed $value, mixed ...$args): mixed
     {
@@ -44,6 +50,18 @@ namespace {
         }
     }
 
-    echo 0 === $failures ? "OK: scroll threshold clamps to 0..5000\n" : '';
+    // Swift inactive: the checkbox is not printed, so a save keeps what is stored.
+    $GLOBALS['anchor_test_option'] = ['enable_swift_integration' => false];
+    if ($settings->sanitize(['enabled' => '1'])['enable_swift_integration'] !== false) {
+        echo "FAIL: saving without Swift changed the stored Swift switch\n";
+        $failures++;
+    }
+    $GLOBALS['anchor_test_option'] = [];
+    if ($settings->sanitize(['enabled' => '1'])['enable_swift_integration'] !== true) {
+        echo "FAIL: saving without Swift turned the default-on Swift switch off\n";
+        $failures++;
+    }
+
+    echo 0 === $failures ? "OK: scroll threshold clamps to 0..5000, Swift switch survives a save\n" : '';
     exit($failures > 0 ? 1 : 0);
 }

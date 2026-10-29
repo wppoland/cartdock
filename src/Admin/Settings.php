@@ -186,14 +186,14 @@ final class Settings implements HasHooks
                                                 value="1"
                                                 <?php checked((bool) ($settings['enable_swift_integration'] ?? true), true); ?>
                                             />
-                                            <?php esc_html_e('Show 1-click "Buy Now" button powered by Swift in the sticky bar.', 'cartdock'); ?>
+                                            <?php esc_html_e('Show the Swift Buy Now button in the sticky bar.', 'cartdock'); ?>
                                         </label>
                                         <p class="description">
-                                            <?php esc_html_e('Swift is active. When enabled, simple products feature an express checkout button alongside the standard Add to Cart button.', 'cartdock'); ?>
+                                            <?php esc_html_e('Swift is active. On simple products the bar shows its Buy Now button next to Add to cart.', 'cartdock'); ?>
                                         </p>
                                     <?php else : ?>
                                         <p class="description">
-                                            <?php esc_html_e('Install Swift (Direct Checkout / Buy Now for WooCommerce) to add a 1-click express checkout button directly into the Cartdock sticky bar.', 'cartdock'); ?>
+                                            <?php esc_html_e('Install Swift - Buy Now Button for WooCommerce to add a Buy Now button next to Add to cart in the sticky bar.', 'cartdock'); ?>
                                         </p>
                                     <?php endif; ?>
                                 </td>
@@ -244,7 +244,11 @@ final class Settings implements HasHooks
         $sanitized = [
             'enabled'                  => ! empty($raw['enabled']),
             'scroll_threshold'         => $threshold,
-            'enable_swift_integration' => ! empty($raw['enable_swift_integration']),
+            // The checkbox is only printed while Swift is active; saving the
+            // screen without it must not switch the integration off.
+            'enable_swift_integration' => class_exists('\\Swift\\Plugin')
+                ? ! empty($raw['enable_swift_integration'])
+                : (bool) ($this->settings()['enable_swift_integration'] ?? true),
         ];
 
         /**

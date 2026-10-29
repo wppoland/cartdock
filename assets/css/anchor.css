@@ -326,3 +326,9 @@
 		transition: none;
 	}
 }
+
+/* Buy Now from Swift sits beside the bar's own form, not inside it. */
+.anchor-bar__inner > .swift-buy-now {
+	flex: 0 0 auto;
+	margin: 0;
+}

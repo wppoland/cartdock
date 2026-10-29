@@ -119,8 +119,13 @@ $thumbnailId  = (int) $product->get_image_id();
                 <button type="submit" class="button alt anchor-bar__button" data-anchor-add>
                     <?php echo esc_html($product->single_add_to_cart_text()); ?>
                 </button>
-                <?php do_action('anchor_after_add_to_cart_button', $product, $settings); ?>
             </form>
+            <?php
+            // Outside the form on purpose: a Buy Now control printed here may
+            // be a form of its own, and a form nested in this one is dropped by
+            // the parser, so its fields would ride along with Add to cart.
+            do_action('anchor_after_add_to_cart_button', $product, $settings);
+            ?>
         <?php else : ?>
             <div class="anchor-bar__actions">
                 <a class="button anchor-bar__button" href="<?php echo esc_url($productUrl); ?>">
