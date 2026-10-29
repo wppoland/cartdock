@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Anchor - Sticky Add to Cart Bar for WooCommerce 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anchor\n"
-"POT-Creation-Date: 2026-09-26T04:48:57+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartdock\n"
+"POT-Creation-Date: 2026-10-29T13:40:30+00:00\n"
 "PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -49,56 +49,48 @@ msgstr "https://wppoland.com"
 msgid "Cartdock requires WooCommerce to be installed and activated."
 msgstr ""
 
-#: src/Admin/ProUpsell.php:85
-msgid "Wkrótce"
-msgstr "Wkrótce"
-
-#: src/Admin/ProUpsell.php:85
+#: src/Admin/ProUpsell.php:110
 msgid "Coming soon"
 msgstr "Wkrótce"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:91
+#: src/Admin/ProUpsell.php:116
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "od %1$s%2$d/rok"
 
-#: src/Admin/ProUpsell.php:100
+#: src/Admin/ProUpsell.php:125
 msgid "Upgrade to PRO"
 msgstr "Przejdź na PRO"
 
-#: src/Admin/ProUpsell.php:101
-msgid "Powiadom mnie"
-msgstr "Powiadom mnie"
-
-#: src/Admin/ProUpsell.php:101
+#: src/Admin/ProUpsell.php:126
 msgid "Get notified"
 msgstr "Powiadom mnie"
 
-#: src/Admin/ProUpsell.php:131
+#: src/Admin/ProUpsell.php:156
 msgid "Permission denied."
 msgstr "Brak uprawnień."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:186
 #, php-format
 msgid "Do more with %s"
 msgstr "Zrób więcej dzięki %s"
 
-#: src/Admin/ProUpsell.php:168
+#: src/Admin/ProUpsell.php:193
 msgid "Dismiss this notice"
 msgstr "Odrzuć to powiadomienie"
 
-#: src/Admin/ProUpsell.php:190
+#: src/Admin/ProUpsell.php:215
 msgid "Unlock every PRO feature"
 msgstr "Odblokuj wszystkie funkcje PRO"
 
-#: src/Admin/ProUpsell.php:203
+#: src/Admin/ProUpsell.php:228
 msgid "one licence, every PRO feature"
 msgstr "jedna licencja, wszystkie funkcje PRO"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:222
+#: src/Admin/ProUpsell.php:247
 #, php-format
 msgid "What %s adds"
 msgstr "Co dodaje %s"
@@ -170,13 +162,44 @@ msgstr ""
 "Niższa wartość oznacza, że pasek pojawi się wcześniej, wyższa ukryje go na "
 "dłużej. Teraz pojawia się po przewinięciu o %s."
 
-#: templates/sticky-bar.php:35 templates/sticky-bar.php:87
+#: src/Admin/Settings.php:174
+msgid "Ecosystem integrations"
+msgstr ""
+
+#: src/Admin/Settings.php:178
+msgid "Swift (Buy Now)"
+msgstr ""
+
+#: src/Admin/Settings.php:189
+msgid "Show the Swift Buy Now button in the sticky bar."
+msgstr ""
+
+#: src/Admin/Settings.php:192
+msgid ""
+"Swift is active. On simple products the bar shows its Buy Now button next to "
+"Add to cart."
+msgstr ""
+
+#. translators: %s: partner plugin name, linked to its search on the Add Plugins screen.
+#: src/Admin/Settings.php:199
+#, php-format
+msgid ""
+"Install %s to add a Buy Now button next to Add to cart in the sticky bar."
+msgstr ""
+
+#: templates/sticky-bar.php:36 templates/sticky-bar.php:105
 msgid "Add to cart"
 msgstr "Dodaj do koszyka"
 
-#: templates/sticky-bar.php:68
+#: templates/sticky-bar.php:85
 msgid "Choose options"
 msgstr "Wybierz opcje"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Wkrótce"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Powiadom mnie"
 
 #~ msgid "Plogins Anchor - Sticky Add to Cart for WooCommerce"
 #~ msgstr ""
