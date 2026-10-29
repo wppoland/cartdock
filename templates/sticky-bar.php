@@ -119,6 +119,7 @@ $thumbnailId  = (int) $product->get_image_id();
                 <button type="submit" class="button alt anchor-bar__button" data-anchor-add>
                     <?php echo esc_html($product->single_add_to_cart_text()); ?>
                 </button>
+                <?php do_action('anchor_after_add_to_cart_button', $product, $settings); ?>
             </form>
         <?php else : ?>
             <div class="anchor-bar__actions">

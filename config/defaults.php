@@ -22,4 +22,7 @@ return [
     // Pixels scrolled past the main add-to-cart form before the bar reveals.
     // Clamped to a sane range on save.
     'scroll_threshold' => 300,
+
+    // Ecosystem integrations.
+    'enable_swift_integration' => true,
 ];
