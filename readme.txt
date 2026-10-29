@@ -52,6 +52,10 @@ To read the code, report a bug or suggest a change, the repository is at
 * Ships with a POT file for translation, and deleting the plugin removes the two options it stores.
 * Declares HPOS and cart/checkout blocks compatibility.
 
+= Works with other Plogins plugins =
+
+* [Swift - Buy Now Button for WooCommerce](https://plogins.com/plogins-swift/) - with Swift active, tick "Show the Swift Buy Now button in the sticky bar" under Ecosystem integrations and the sticky bar shows Swift's Buy Now button next to Add to cart on simple products.
+
 == Cartdock Pro ==
 
 Cartdock Pro is a separate paid plugin that extends Cartdock.
@@ -109,6 +113,10 @@ Yes. Set the scroll threshold in pixels under **WooCommerce > Cartdock** (0-5000
 
 Yes. On simple products the bar shows the title, price and add-to-cart button. On variable products it tracks the selected variation.
 
+
+= Does it work with Swift? =
+
+Yes. With Swift active, tick "Show the Swift Buy Now button in the sticky bar" under WooCommerce > Cartdock, Ecosystem integrations. Simple products then get Swift's Buy Now button in the bar next to Add to cart; variable products do not show it. Add to cart in the bar still only adds to the cart.
 
 = Does this plugin work on WordPress Multisite? =
 
