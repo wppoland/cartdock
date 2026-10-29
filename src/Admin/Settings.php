@@ -170,6 +170,38 @@ final class Settings implements HasHooks
                     </table>
                 </div>
 
+                <div class="anchor-card">
+                    <h2><?php esc_html_e('Ecosystem integrations', 'cartdock'); ?></h2>
+                    <table class="form-table" role="presentation">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php esc_html_e('Swift (Buy Now)', 'cartdock'); ?></th>
+                                <td>
+                                    <?php if (class_exists('\Swift\Plugin')) : ?>
+                                        <label for="anchor_enable_swift">
+                                            <input
+                                                type="checkbox"
+                                                id="anchor_enable_swift"
+                                                name="<?php echo esc_attr(self::OPTION); ?>[enable_swift_integration]"
+                                                value="1"
+                                                <?php checked((bool) ($settings['enable_swift_integration'] ?? true), true); ?>
+                                            />
+                                            <?php esc_html_e('Show the Swift Buy Now button in the sticky bar.', 'cartdock'); ?>
+                                        </label>
+                                        <p class="description">
+                                            <?php esc_html_e('Swift is active. On simple products the bar shows its Buy Now button next to Add to cart.', 'cartdock'); ?>
+                                        </p>
+                                    <?php else : ?>
+                                        <p class="description">
+                                            <?php esc_html_e('Install Swift - Buy Now Button for WooCommerce to add a Buy Now button next to Add to cart in the sticky bar.', 'cartdock'); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <?php
                 /**
                  * Fires inside the Cartdock settings form, after the core cards and
@@ -210,8 +242,13 @@ final class Settings implements HasHooks
         $threshold = max(self::MIN_THRESHOLD, min(self::MAX_THRESHOLD, $threshold));
 
         $sanitized = [
-            'enabled'          => ! empty($raw['enabled']),
-            'scroll_threshold' => $threshold,
+            'enabled'                  => ! empty($raw['enabled']),
+            'scroll_threshold'         => $threshold,
+            // The checkbox is only printed while Swift is active; saving the
+            // screen without it must not switch the integration off.
+            'enable_swift_integration' => class_exists('\\Swift\\Plugin')
+                ? ! empty($raw['enable_swift_integration'])
+                : (bool) ($this->settings()['enable_swift_integration'] ?? true),
         ];
 
         /**

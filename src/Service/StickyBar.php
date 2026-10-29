@@ -31,6 +31,9 @@ final class StickyBar implements HasHooks
         // Print late in the product summary so the markup sits after the native
         // add-to-cart form in source order; CSS fixes it to the viewport edge.
         add_action('woocommerce_after_single_product', [$this, 'renderBar'], 20);
+
+        // Cross-plugin ecosystem integration with Swift (Buy Now).
+        add_action('anchor_after_add_to_cart_button', [$this, 'renderSwiftBuyNow'], 10, 2);
     }
 
     public function enqueueAssets(): void
@@ -182,5 +185,28 @@ final class StickyBar implements HasHooks
         require $file;
 
         return true;
+    }
+
+    /**
+     * Render 1-click Buy Now button powered by Swift when Swift is active.
+     *
+     * @param \WC_Product          $product  The current product.
+     * @param array<string, mixed> $settings Resolved plugin settings.
+     */
+    public function renderSwiftBuyNow(\WC_Product $product, array $settings): void
+    {
+        if (! class_exists('\Swift\Plugin')) {
+            return;
+        }
+
+        if (empty($settings['enable_swift_integration'])) {
+            return;
+        }
+
+        if ($product->is_type('variable')) {
+            return;
+        }
+
+        echo do_shortcode(sprintf('[swift_buy_now id="%d"]', (int) $product->get_id()));
     }
 }
