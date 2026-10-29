@@ -3,7 +3,7 @@
  * Plugin Name:       Cartdock - Sticky Add to Cart for WooCommerce
  * Plugin URI:        https://plogins.com/cartdock/
  * Description:        A sticky add-to-cart bar that appears on scroll, boosting conversions on long product pages.
- * Version:           1.1.10
+ * Version:           1.1.11
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Requires Plugins:  woocommerce
@@ -25,7 +25,7 @@ namespace Anchor;
 
 defined('ABSPATH') || exit;
 
-const VERSION     = '1.1.10';
+const VERSION     = '1.1.11';
 const PLUGIN_FILE = __FILE__;
 
 define('ANCHOR_DIR', plugin_dir_path(__FILE__));
