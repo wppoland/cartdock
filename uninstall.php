@@ -24,10 +24,31 @@ if (! function_exists('get_plugins')) {
 wp_cache_delete('plugins', 'plugins');
 
 // Matched on the text domain, so a renamed PRO folder still counts.
-if (! in_array('cartdock-pro', array_column(get_plugins(), 'TextDomain'), true)) {
-    delete_option('anchor_settings');
+$anchor_addon_installed = in_array('cartdock-pro', array_column(get_plugins(), 'TextDomain'), true);
+
+// A closure rather than a named function, so the file can be included more
+// than once in a request without a redeclaration error.
+$anchor_uninstall_site = static function () use ($anchor_addon_installed): void {
+    if (! $anchor_addon_installed) {
+        delete_option('anchor_settings');
+    }
+    delete_option('anchor_db_version');
+};
+
+// Options are per site, so a network uninstall has to visit every site. The
+// add-on check above is about the plugin folders, which are shared by the whole
+// network, so it is read once.
+if (is_multisite()) {
+    foreach (get_sites(['fields' => 'ids', 'number' => 0]) as $anchor_site_id) {
+        switch_to_blog((int) $anchor_site_id);
+        $anchor_uninstall_site();
+        restore_current_blog();
+    }
+    unset($anchor_site_id);
+} else {
+    $anchor_uninstall_site();
 }
-delete_option('anchor_db_version');
+unset($anchor_uninstall_site);
 
 // The PRO banner's dismissal is stored per user, so it belongs to the
 // plugin rather than to the site content. User meta is global, not

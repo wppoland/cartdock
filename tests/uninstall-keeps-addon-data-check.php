@@ -21,6 +21,10 @@ $deleted = [];
 $disk    = [];
 $cache   = null;
 
+function is_multisite(): bool
+{
+    return false;
+}
 function wp_cache_delete(string $key, string $group): bool
 {
     if ('plugins' === $key && 'plugins' === $group) {
