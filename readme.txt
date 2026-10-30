@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.11
+Stable tag: 1.1.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -147,6 +147,9 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.12 =
+* Fixed: deleting the plugin keeps the bar settings while an add-on that stores its own settings there is still installed; whichever is deleted last removes them.
 
 = 1.1.11 =
 * The Swift line under Ecosystem integrations links to the plugin search on the Add Plugins screen when Swift is not installed.
