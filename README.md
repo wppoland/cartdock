@@ -1,7 +1,7 @@
-# Anchor
+# Cartdock
 
-- **Plugin page:** https://plogins.com/anchor/
-- **Documentation:** https://plogins.com/anchor/docs/
+- **Plugin page:** https://plogins.com/cartdock/
+- **Documentation:** https://plogins.com/cartdock/docs/
 - **Author:** [WPPoland.com](https://wppoland.com)
 - **WordPress.org contributor:** motylanogha
 - **Source:** https://github.com/wppoland/cartdock
