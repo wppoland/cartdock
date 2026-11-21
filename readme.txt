@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.13
+Stable tag: 1.1.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -147,6 +147,9 @@ Cartdock sends no email and makes no HTTP requests of its own.
 Cartdock is fully translatable and ships the `cartdock.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.14 =
+* Changed: the bar's light or dark look follows the theme's color scheme instead of the visitor's operating system, so it stays light on light themes and goes dark on dark themes; older browsers keep the previous behaviour.
 
 = 1.1.13 =
 * Fixed: deleting the plugin on a multisite network now removes its settings from every site, not only the main one. Settings an installed add-on shares are still kept on every site.

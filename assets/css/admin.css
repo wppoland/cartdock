@@ -145,18 +145,36 @@
 	.anchor-admin .anchor-pro-banner__cta, .anchor-admin .anchor-pro-aside__cta { transition: background-color .15s ease, border-color .15s ease; }
 }
 
-/* Dark-mode: follow the OS preference like the rest of this screen. */
-@media (prefers-color-scheme: dark) {
+/* Dark-mode follows the page's color scheme; wp-admin declares none, so it stays light. */
+@supports (color: light-dark(white, black)) {
 	.anchor-admin {
-		--anchor-card-bg: #1e1e1e;
-		--anchor-card-fg: #e0e0e0;
-		--anchor-card-border: #3c3c3c;
-		--anchor-accent: #c89b53;
-		--anchor-accent-soft: rgba( 200, 155, 83, 0.10 );
-		--anchor-pro-muted: #a7aaad;
+		--anchor-card-bg: light-dark(#fff, #1e1e1e);
+		--anchor-card-fg: light-dark(#1e1e1e, #e0e0e0);
+		--anchor-card-border: light-dark(#dcdcde, #3c3c3c);
+		--anchor-accent: light-dark(#8a6a31, #c89b53);
+		--anchor-accent-soft: light-dark(rgba( 138, 106, 49, 0.08 ), rgba( 200, 155, 83, 0.10 ));
+		--anchor-pro-muted: light-dark(#646970, #a7aaad);
 	}
-	.anchor-admin .anchor-pro-banner__text { color: var(--anchor-card-fg); }
+	.anchor-admin .anchor-pro-banner__text { color: light-dark(#1d2327, var(--anchor-card-fg)); }
 	.anchor-admin .anchor-pro-banner__cta.button-primary,
-	.anchor-admin .anchor-pro-aside__cta.button-primary { color: #1e1e1e; }
-	.anchor-admin .anchor-pro-banner__dismiss:hover { color: var(--anchor-card-fg); background: rgba(255, 255, 255, .08); }
+	.anchor-admin .anchor-pro-aside__cta.button-primary { color: light-dark(#fff, #1e1e1e); }
+	.anchor-admin .anchor-pro-banner__dismiss:hover { color: light-dark(#1d2327, var(--anchor-card-fg)); background: light-dark(rgba(0, 0, 0, .05), rgba(255, 255, 255, .08)); }
+}
+
+/* Browsers without light-dark() keep following the OS preference. */
+@supports not (color: light-dark(white, black)) {
+	@media (prefers-color-scheme: dark) {
+		.anchor-admin {
+			--anchor-card-bg: #1e1e1e;
+			--anchor-card-fg: #e0e0e0;
+			--anchor-card-border: #3c3c3c;
+			--anchor-accent: #c89b53;
+			--anchor-accent-soft: rgba( 200, 155, 83, 0.10 );
+			--anchor-pro-muted: #a7aaad;
+		}
+		.anchor-admin .anchor-pro-banner__text { color: var(--anchor-card-fg); }
+		.anchor-admin .anchor-pro-banner__cta.button-primary,
+		.anchor-admin .anchor-pro-aside__cta.button-primary { color: #1e1e1e; }
+		.anchor-admin .anchor-pro-banner__dismiss:hover { color: var(--anchor-card-fg); background: rgba(255, 255, 255, .08); }
+	}
 }

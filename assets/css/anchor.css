@@ -276,28 +276,58 @@
  * Light themes: when the OS / theme is light, lift the surface to a pale dock
  * grey so the brass still reads but the bar sits quietly against a bright page.
  */
-@media ( prefers-color-scheme: light ) {
+/*
+ * The bar's light or dark look follows the page's color scheme (set by the
+ * theme), not the OS. Two shadow layers keep each scheme's exact shadow.
+ */
+@supports (color: light-dark(white, black)) {
 	.anchor-bar {
-		--anchor-bg: var( --wp--preset--color--base, #ffffff );
-		--anchor-fg: var( --wp--preset--color--contrast, #15212b );
-		--anchor-muted: #5c6b75;
-		--anchor-border: rgba( 138, 106, 49, 0.32 );
-		--anchor-shadow: 0 -8px 24px rgba( 17, 32, 43, 0.16 );
+		--anchor-bg: light-dark(var( --wp--preset--color--base, #ffffff ), var( --wp--preset--color--contrast, #11202b ));
+		--anchor-fg: light-dark(var( --wp--preset--color--contrast, #15212b ), var( --wp--preset--color--base, #f3f6f8 ));
+		--anchor-muted: light-dark(#5c6b75, #9fb3c0);
+		--anchor-border: light-dark(rgba( 138, 106, 49, 0.32 ), rgba( 200, 155, 83, 0.28 ));
+		--anchor-shadow: 0 -8px 24px light-dark(rgba( 17, 32, 43, 0.16 ), transparent), 0 -10px 30px light-dark(transparent, rgba( 6, 16, 24, 0.45 ));
 	}
 
 	.anchor-bar__price ins {
-		color: var( --anchor-brass-deep );
+		color: light-dark(var( --anchor-brass-deep ), var( --anchor-brass-bright ));
 	}
 
 	.anchor-bar__button--choose {
-		color: var( --anchor-brass-deep );
-		/* On a bright surface, mid brass (#c89b53) is only ~2.5:1; deep brass
-		   keeps the control ring at >=3:1 (≈5:1). */
-		border-color: var( --anchor-brass-deep );
+		color: light-dark(var( --anchor-brass-deep ), var( --anchor-brass-bright ));
+		border-color: light-dark(var( --anchor-brass-deep ), var( --anchor-brass ));
 	}
 
 	.anchor-bar__button--choose:hover {
-		border-color: var( --anchor-brass );
+		border-color: light-dark(var( --anchor-brass ), var( --anchor-brass-bright ));
+	}
+}
+
+/* Browsers without light-dark() keep following the OS preference. */
+@supports not (color: light-dark(white, black)) {
+	@media ( prefers-color-scheme: light ) {
+		.anchor-bar {
+			--anchor-bg: var( --wp--preset--color--base, #ffffff );
+			--anchor-fg: var( --wp--preset--color--contrast, #15212b );
+			--anchor-muted: #5c6b75;
+			--anchor-border: rgba( 138, 106, 49, 0.32 );
+			--anchor-shadow: 0 -8px 24px rgba( 17, 32, 43, 0.16 );
+		}
+
+		.anchor-bar__price ins {
+			color: var( --anchor-brass-deep );
+		}
+
+		.anchor-bar__button--choose {
+			color: var( --anchor-brass-deep );
+			/* On a bright surface, mid brass (#c89b53) is only ~2.5:1; deep brass
+			   keeps the control ring at >=3:1 (≈5:1). */
+			border-color: var( --anchor-brass-deep );
+		}
+
+		.anchor-bar__button--choose:hover {
+			border-color: var( --anchor-brass );
+		}
 	}
 }
 
