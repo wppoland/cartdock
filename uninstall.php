@@ -15,10 +15,6 @@ declare(strict_types=1);
 
 defined('WP_UNINSTALL_PLUGIN') || exit;
 
-if (! function_exists('get_plugins')) {
-    require_once ABSPATH . 'wp-admin/includes/plugin.php';
-}
-
 // Core's bulk delete runs every uninstall in one request, and the cached plugin
 // list would still show a PRO whose files were deleted a moment earlier.
 wp_cache_delete('plugins', 'plugins');
