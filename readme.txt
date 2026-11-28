@@ -1,6 +1,6 @@
 === Cartdock - Sticky Add to Cart for WooCommerce ===
 Contributors: motylanogha
-Tags: woocommerce, add to cart, sticky, conversion, product page
+Tags: sticky add to cart, sticky cart, add to cart button, sticky bar, product page
 Requires at least: 6.5
 Tested up to: 7.2
 Requires PHP: 8.1
