@@ -23,8 +23,8 @@ return [
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Custom bar button colour and label', 'desc' => 'Override the sticky bar buy-button text and colour on WooCommerce > Cartdock.'],
-            'pl' => ['title' => 'Własny kolor i etykieta przycisku', 'desc' => 'Nadpisz tekst i kolor przycisku zakupu na przyklejonym pasku w WooCommerce > Cartdock.'],
+            'en' => ['title' => 'Custom bar button colour and label', 'desc' => 'Override the sticky bar\'s button colour and, on simple products, its button text, on WooCommerce > Cartdock.'],
+            'pl' => ['title' => 'Własny kolor i etykieta przycisku', 'desc' => 'Nadpisz kolor przycisków przyklejonego paska, a na produktach prostych także tekst przycisku, w WooCommerce > Cartdock.'],
         ],
         [
             'en' => ['title' => 'Placement rules', 'desc' => 'Show or hide the sticky bar on selected products and categories, include-only or exclude modes.'],
